@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAROUNE.STORE</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+/* خلفية متحركة */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    background-size: 400% 400%;
+    animation: animateBG 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes animateBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* صندوق المحتوى */
+.container {
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* تأثير نيون للعنوان */
+h1 {
+    font-size: 50px;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ff00c8,
+        0 0 20px #ff00c8,
+        0 0 40px #ff00c8;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ff00c8,
+        0 0 20px #ff00c8;
+    }
+    to {
+        text-shadow:
+        0 0 10px #fff,
+        0 0 20px #00ffd5,
+        0 0 40px #00ffd5;
+    }
+}
+
+/* زر احترافي */
+button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff00c8, #00ffd5);
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffd5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>HAROUNE.SHOP</h1>
+    <p>متجر عربي شامل لجميع خدمات الإنترنت</p>
+    <button>تصفح المنتجات</button>
+</div>
+
+</body>
+</html>
